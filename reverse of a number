@@ -1,0 +1,14 @@
+declare
+num number; 
+rev number; 
+
+begin
+num:=1234;
+DBMS_OUTPUT.PUT_LINE('The number is: ' ||num);
+rev:=0; 
+while num>0 LOOP 
+rev:=(rev*10) + mod(num,10); 
+num:=floor(num/10); 
+end loop; 
+DBMS_OUTPUT.PUT_LINE('Reverse of the number is: ' || rev); 
+end;
